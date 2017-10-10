@@ -49,6 +49,8 @@ def nameDrink():
 if __name__ == '__main__':
 	askQuestions()
 	constructDrink()
+	drinkIngredients = constructDrink()
+	drinkIngredientsString = ' '.join(drinkIngredients)
 	yesAnother = nameDrink()
 	while True:	
 		y = True
@@ -57,4 +59,4 @@ if __name__ == '__main__':
 		if (another == False):
 			break
 		else:
-			print("Here's another " + yesAnother)
+			print("Here's another " + yesAnother + " with "+ drinkIngredientsString)
